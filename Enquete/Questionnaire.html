@@ -1,0 +1,250 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="../css/style.css">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    </head> 
+    <script>
+
+function psuivant(){
+    document.location.href="Quest1.html"
+}
+    </script>
+   
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+          <div class="container">
+              <a class="navbar-brand" href="../#page-top"><img src="../Images/logo-non-bg.png" alt="Logo de notre projet" /></a>
+          
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                      <li class="nav-item"><a class="nav-link" href="../#services">Qui somme-nous ?</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../#portfolio">Nos Projets</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../#contact">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+        
+                <div class="masthead-heading text-uppercase"> kitcheeze </div>
+                <div class="masthead-subheading">  
+        
+                    Faites vous enfin livrer les plats maison dont vous révez
+                </div>
+            </div>
+        </header>      
+
+    </br></br>
+    <center>
+    <div class="class">
+        
+      <i>Bonjour , <span id=span1></span> 
+    <span id=span2></span></i>
+  
+    
+</div>
+</br>
+<div >
+    <form name="form1">
+        <div >
+
+       
+            <legend>Question 1</legend>
+                <label class="quest"> A quelle frequence sollicitez-vous les services de Kitcheeze :  ?</label>
+                 </br><br>
+            <label>
+                <input type="radio" name="qust" id="choix1" value="Très long"  checked>
+                <span class="design"></span>
+                <span class="text">Toujours</span>
+            </label>
+                </br><br>
+             <label>
+                <input type="radio" name="qust" id="choix2" value="2" onClick="q1=10">
+                 <span class="design"></span>
+                <span class="text"> Souvent</span>
+             </label>
+            </br><br>
+            <label>
+                 <input type="radio" name="qust" id="choix3" value="3"  onClick="q1=5">
+                  <span class="design"></span>
+                  <span class="text"> Jamais</span>
+                </label>
+        
+        <br/><br/>
+    </div>
+    <div >
+       
+            <legend>Question 2</legend>
+            
+                    <label class="quest"> Comment jugez-vous la qualite du service de livraison?</p>
+                    Choisissez entre 1 (tres satifaisant) et 5 (insatisfaisant)</label>
+                  </br>
+                </br>
+
+      <div >
+            <div >
+                  <div class="rating-text">
+ 
+
+                  </div>
+                  <div class="rating">
+                    <form class="rating-form">
+              
+                      <label for="super-happy">
+                          <input type="radio" name="rating" class="super-happy" id="super-happy" value="30" onClick="q2=30"  checked/>
+                          <img src="../Images/emoji/in-love.png" height="70px" width="70px">
+                      </label>
+              
+                      <label for="happy">
+                          <input type="radio" name="rating" class="happy" id="happy" value="20" onClick="q2=20"/>
+                          <img src="../Images/emoji/smile.png" height="70px" width="70px">
+
+                          </label>
+              
+                      <label for="neutral">
+                          <input type="radio" name="rating" class="neutral" id="neutral" value="10" onClick="q2=10" />
+                          <img src="../Images/emoji/weird.png" height="70px" width="70px">
+
+                          </label>
+              
+                      <label for="sad">
+                          <input type="radio" name="rating" class="sad" id="sad" value="5" onClick="q2=5"/>
+                          <img src="../Images/emoji/sad.png" height="70px" width="70px">
+
+                          </label>
+              
+                      <label for="super-sad">
+                          <input type="radio" name="rating" class="super-sad" id="super-sad" value="1"  onClick="q2=1"/>
+                          <img src="../Images/emoji/yelling.png" height="70px" width="70px">
+
+                          </label>
+              
+                    </form>
+                  </div>
+                </div>
+              </div>
+        <br/><br/>
+    </div>
+    <div class="buttonSP">
+
+            <input type="button" name="valid_inscr" id="bouton_envoi" class="input_form" value="Précédent" onclick="getCookie()" />
+            <input type="button" name="valid_inscr" id="bouton_envoi" class="input_form" value="Suivant" onclick="calcul1(form1),calcul2(form1),moy(),psuivant()" />
+  </div> 
+  <br/><br/>
+    </center>
+        <section class="page-section" id="contact"> 
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>  
+        </section>
+        
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Kitcheeze 2021</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><img src="../Images/Icones/facebook.png" width="30" height="30"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><img src="../Images/Icones/instagram.png" width="40" height="40"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><img src="../Images/Icones/twitter.png" width="30" height="30"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="../js/scripts.js"></script>
+            <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+            <!-- * *                               SB Forms JS                               * *-->
+            <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+            <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+          
+    </body>
+  
+    <script>
+        /*FOnction qui permet de recuperer la valeur d'un cookie*/
+/*FOnction qui permet de recuperer la valeur d'un cookie*/
+function getCookie(name){
+      if(document.cookie.length == 0)
+        return null;
+
+      var regSepCookie = new RegExp('(; )', 'g');
+      var cookies = document.cookie.split(regSepCookie);
+
+      for(var i = 0; i < cookies.length; i++){
+        var regInfo = new RegExp('=', 'g');
+        var infos = cookies[i].split(regInfo);
+        if(infos[0] == name){
+             return unescape (infos[1]);
+        }
+      }
+      return null;
+    }
+  /*on insere les valeur de cookies dans les input dont les ID sont 'session-nom' et 'session-prenom'*/
+  var prenom = document.getElementById('span1').innerHTML = getCookie('_prenom');
+  var nom = document.getElementById('span2').innerHTML = getCookie('_nom');
+
+
+
+
+
+
+          function calcul1(form1){
+    if (form1.qust[0].checked)
+    {
+    document.cookie= "_note=" + parseInt(1);
+    }else if (form1.qust[1].checked)
+    {
+    document.cookie= "_note=" +parseFloat(2);
+    }else 
+    {
+    document.cookie= "_note=" +parseFloat(4);
+    }
+
+  }
+
+
+  function calcul2(form1){
+    if (form1.rating[0].checked)
+    {
+    document.cookie= "_note2=" + parseInt(5);
+    }else if (form1.rating[1].checked)
+    {
+    document.cookie= "_note2=" +parseFloat(4);
+    }else if (form1.rating[2].checked)
+    {
+    document.cookie= "_note2=" +parseFloat(3);
+    }else if (form1.rating[3].checked)
+    {
+    document.cookie= "_note2=" +parseFloat(2);
+    }else{
+        document.cookie= "_note2=" +parseFloat(1);
+    }
+
+    
+  }
+
+  function moy(){
+    var note = parseInt (getCookie('_note'));
+  var note = note + parseInt (getCookie('_note2'));
+  document.cookie ="note=" +note;
+  }
+
+  
+    </script>
+
+    
+</html>

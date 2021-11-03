@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Traiter un formulaire</h1>
+    <p>Elaborer un forumulaire avec : nom, prénom, email, age, url, date.
+        Ecrire des fonctions JS pour :
+        Transformer le nom en majuscules dès que le focus quitte l'input du nom
+        Transformer le prénom en première lettre majuscule / les suivantes en minuscules dès que le focus quitte l'input
+        prénom
+        Vérifier l'age, un entier entre 18 et 100;
+        Vérifier l'email valide
+        Vérifier url valide
+        Vérifier la date valide.
+    </p>
+    <form method="post">
+        <script language="JavaScript"></script>
+        <script>
+            function traiterNom() {
+                var nom = document.getElementById("nom").value;
+                nom = nom.toUpperCase();
+                document.getElementById("nom").value = nom;
+
+            }
+            function traiterAge() {
+                var age = document.getElementById("age").value;
+                if (age < 18 || age > 100) {
+                    alert("Vous êtes trop (ou trop peu) agé");
+                }
+
+            }
+            function traiterPrenom() {
+                var prenom = document.getElementById("prenom").value;
+                var maj = prenom.toUpperCase().charAt(0);
+                prenom = maj + prenom.substring(1);
+                document.getElementById("prenom").value = prenom;
+            }
+            function traiterEmail() {
+                var email = document.getElementById("email").value;
+                var cpt1 = 0, cpt2=0;
+                for (let i =0; i<email.length;i++){
+                    if (email.charAt(i)=='@') {
+                        cpt1++;
+                    }
+                    else if(email.charAt(i)=='.'){
+                        cpt2++;
+                    }
+                }
+                alert(cpt2);
+                    if (cpt1 ==1 && cpt2>=1){
+                        document.getElementById("email").style.backgroundColor="green";
+                    }
+                    else{
+                        document.getElementById("email").style.backgroundColor="red";
+                    }
+                
+                
+            }
+
+
+
+
+
+        </script>
+        <label for="nom">Veuillez entrer votre Nom</label><input type="text" id="nom" onblur="traiterNom()">
+        <br />
+        <br />
+        <label for="prenom">Veuillez entrer votre Prénom</label><input type="text" id="prenom" onblur="traiterPrenom()">
+        <br />
+        <br />
+        <label for="email">Veuillez entrer votre adresse Email</label><input type="text" id="email"
+            onblur="traiterEmail()">
+        <br />
+        <br />
+        <label for="age">Veuillez entrer votre age</label><input type="number" id="age" onblur="traiterAge()">
+        <br />
+        <br />
+        <label for="url">Veuillez entrer L'Url</label><input type="text" id="url">
+        <br />
+        <br />
+        <label for="date">Veuillez entrer la date du jour</label><input type="text" id="date">
+        <br />
+        <br />
+        <label for="valider"></label><input type="submit" id="valider">
+        <br />
+        <br />
+        <label for="effacer"></label><input type="reset" id="effacer">
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercice Nombre Parfait</h1>
+    <p>Ecrire une fonction qui recoit un entier et renvoie la somme de ses diviseurs sauf lui même</p>
+    <p>Ecrire une fonction qui recoit deux entiers et renvoie le test de leur égalité
+
+        Ecrire une procédure qui recoit deux limites et renvoie tous les nombres parfaits compris entre les limites.
+        exemple de nbr parfait 6 : diviseurs =1,2,3 et 1+2+3=6
+        Elaborer un formulaire de saisie des deux limites et faites appel à la procédure avec un évènement associé au
+        formulaire.
+    </p>
+
+    <script language="JavaScript">
+        function sommeDiviseurs(a){
+            var b=0;
+            for (i=1;i<a;i++){
+                if (a%i ==0){
+                b+=i;
+            }
+        }
+            return b;
+        }
+        
+        function testEgal(a,b){
+            return(a==b);
+        }
+        function recherche(lim1,lim2){
+            var chaine ="les nombres parfaits sont : ";
+            for (nb=lim1;nb<lim2;nb++){
+                if (testEgal(nb, sommeDiviseurs(nb))){
+                    chaine+= nb+",";
+                }
+            }
+            alert(chaine);
+            document.write(chaine);
+
+        }
+        function traiterLimite(){
+            var lim1=parseInt(document.getElementById("lim1").value);
+            var lim2=parseInt(document.getElementById("lim2").value);
+            recherche(lim1,lim2);
+        }
+    </script>
+    <br/>
+    <form method="post" onsubmit="traiterLimite()">
+        <label for="lim1">Limite 1</label>
+        <input type="number" name="lim1" id="lim1">
+        <label for="lim2">Limite 2</label>
+        <input type="number" name="lim2" id="lim2">
+        <input type="submit" name="recherche" value="Recherche">
+    </form>
+</body>
+
+</html>
